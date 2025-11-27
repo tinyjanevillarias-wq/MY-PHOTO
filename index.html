@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tiny Jane Villarias</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GomePixel";
+  src: url("GomePixelFont.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "GomePixel", monospace;
+  color: white;
+  background: linear-gradient(135deg, #dfe8d2, #8fb98a);
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #3d5b34, #ffffff);
+  color: white;
+  border-bottom: 4px solid #2e4028;
+  transition: 0.3s ease;
+}
+
+header:hover h1 {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #baf8a2, 0 0 20px #89db6c;
+}
+
+.navbar {
+  display: flex;
+  background: linear-gradient(90deg, #2f4a29, #6fad62);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 25px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "GomePixel", monospace;
+  transition: 0.25s ease;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: #2b4524;
+  transform: translateY(-3px) scale(1.1);
+  border-radius: 6px;
+  box-shadow: 0 0 10px #c7ffc0;
+}
+
+.container {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background: linear-gradient(#3a5334, #6ea66b);
+  padding: 20px;
+  color: white;
+  border-right: 3px solid #2e4028;
+  transition: 0.3s ease;
+}
+
+.side:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #c9ffbf;
+}
+
+.main {
+  flex: 70%;
+  background: linear-gradient(#c9e5c0, #ffffff);
+  padding: 20px;
+  color: #1c2915;
+  transition: 0.3s ease;
+}
+
+.main:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 15px #9fffa1;
+}
+
+.fakeimg {
+  background-color: #5f7b54;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #31452b;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.fakeimg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #c7ffc0;
+}
+
+.title-hover {
+  transition: 0.25s ease;
+  display: inline-block;
+}
+
+.title-hover:hover {
+  transform: scale(1.10) rotate(-1deg);
+  text-shadow: 
+    0 0 8px #c9ffbf,
+    0 0 16px #9fffa1,
+    0 0 24px #7aff73;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flex-row .fakeimg {
+  flex: 1;
+  min-width: 30%;
+}
+
+.flex-row .fakeimg:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #9fffa1;
+}
+
+.bias-groups-container {
+  display: block;
+  margin: 10px 0;
+  background-color: #999999;
+  color: black;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #666666;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bias-groups-container:hover {
+  background-color: #bbbbbb;
+  box-shadow: 0 0 10px #7aff73;
+}
+
+.bias-groups-container img {
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 8px;
+  box-shadow: 0 0 5px #31452b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bias-groups-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #c7ffc0;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #3d5b34, #87b57e);
+  color: white;
+  border-top: 3px solid #2e4028;
+  transition: 0.3s ease;
+}
+
+footer:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #c9ffbf;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #2b4524;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 700px) {
+  .container, .navbar, .flex-row {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1 class="title-hover">Tiny Jane Villarias</h1>
+  <p>Welcome to my personal website</p>
+</header>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#bias-groups">My Motivations</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#skills">Skills</a>
+  <a href="#background">Background</a>
+</div>
+
+<div class="container">
+  <div class="side">
+    <section id="photo">
+      <h2 class="title-hover">My Photo</h2>
+      <div class="fakeimg" style="
+        height:250px;
+        background-image: url('https://raw.githubusercontent.com/tinyjanevillarias-wq/MY-PHOTO/81f7c7d14a1cc460fea2fa6a63dd40dfb83663fe/1763635346477.jpg');
+        background-size: cover;
+        background-position: center;
+      ">
+      </div>
+    </section>
+    <p>20 years old • From Loma de Gato, Marilao, Bulacan</p>
+
+    <h3 class="title-hover">Organization</h3>
+    <p>PIO – Codability Tech Student Organization</p>
+
+    <h3 class="title-hover">My Bias Groups</h3>
+    <div class="bias-groups-container">
+      ENHYPHEN
+      <img src="https://images8.alphacoders.com/139/thumb-1920-1396757.jpg" alt="Group 1">
+    </div>
+    <div class="bias-groups-container">
+     SEVENTEEN
+      <img src="https://wallpapercat.com/w/full/3/c/e/2453381-1920x1280-desktop-hd-seventeen-wallpaper-image.jpg" alt="Group 2">
+    </div>
+    <div class="bias-groups-container">
+      STRAY KIDS
+      <img src="https://4kwallpapers.com/images/walls/thumbs_2t/23839.jpg" alt="Group 3">
+    </div>
+  </div>
+
+  <div class="main">
+    <section id="home">
+      <h2 class="title-hover">Home</h2>
+      <p>Welcome to my digital space! This website shows who I am, my hobbies, and the things I enjoy.</p>
+    </section>
+
+    <br>
+
+    <section id="about">
+      <h2 class="title-hover">About Me</h2>
+      <p>My name is <b>Tiny Jane Villarias</b>, a <b>20‑year‑old</b> from Loma de Gato, Marilao, Bulacan. I am currently studying at <b>NU‑Fairview</b> as a <b>2nd‑year Bachelor of Science in Information Technology</b> student.</p>
+      <p>I am also the current <b>Public Information Officer (PIO)</b> of the <b>Codability Tech</b> student organization, where I help manage communications, designs, and public materials.</p>
+      <p>I love <b>editing, graphic design, digital drawing, and traditional art</b> such as painting. I’m also a big fan of <b>sports</b> and <b>K-pop</b>, which keep me inspired and motivated every day.</p>
+    </section>
+
+    <br>
+
+      <!-- Sister as 4th motivation container -->
+      <div class="flex-row">
+        <div class="fakeimg" style="
+          height:250px;
+          background-image: url('https://raw.githubusercontent.com/tinyjanevillarias-wq/MY-PHOTO/refs/heads/main/Media.jpg');
+          background-size: cover;
+          background-position: center;
+        ">
+          <h3 class="title-hover" style="color:white; text-shadow: 1px 1px 2px black;">She’s My Sister</h3>
+          <p style="color:white; text-shadow: 1px 1px 2px black;">One of my biggest inspirations in life.</p>
+        </div>
+      </div>
+    </section>
+
+    <br>
+
+    <section id="hobbies">
+      <h2 class="title-hover">Hobbies</h2>
+      <ul>
+        <li>Graphic design</li>
+        <li>Digital drawing & painting</li>
+        <li>Photo and video editing</li>
+        <li>K‑pop music & dance practice</li>
+        <li>Watching or playing sports</li>
+      </ul>
+    </section>
+
+    <br>
+
+    <section id="skills">
+      <h2 class="title-hover">Skills</h2>
+      <ul>
+        <li>Graphic Design & Layout</li>
+        <li>Digital Illustration</li>
+        <li>Basic Programming (IT Student)</li>
+        <li>Editing (Photo & Video)</li>
+        <li>Communication & Leadership (PIO Role)</li>
+      </ul>
+    </section>
+
+    <br>
+
+    <section id="background">
+      <h2 class="title-hover">Background</h2>
+      <p>I grew up in Loma de Gato, Marilao, Bulacan, and I’ve always been passionate about creativity, technology, and self-expression. Now as an IT student at NU-Fairview, I am developing my skills in technology while combining it with my love for visuals and design.</p>
+
+      <p>As the PIO of Codability Tech, I actively participate in student leadership, communication, and event visuals—giving me experience in teamwork, planning, and multimedia creation.</p>
+      
+      <h3>Education</h3>
+      <ul>
+        <li><b>National University Fairview (S.Y 2024 - Present)</b><br>Bachelor of Science in Information Technology with specialization in Mobile and Internet</li>
+        <li><b>Escuela de Sophia of Caloocan, Inc. (S.Y 2023-2024)</b><br>Senior High School: Information And Communication Technology<br>Honor Student (2023-2024)</li>
+        <li><b>Sampaguita High School (S.Y 2021-2022)</b><br>Graduated with Honor</li>
+        <li><b>Oringao Elementary School (S.Y 2012-2015)</b></li>
+        <li><b>FSS Patulo Elementary School (S.Y 2017-2018)</b><br>Graduated</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <h2 class="title-hover">© 2025 Tiny Jane Villarias</h2>
+  <p>Email: <a href="mailto:tinyjane@example.com">tinyjane@example.com</a></p>
+  <div class="social-links">
+    <a href="https://instagram.com/" target="_blank">Instagram</a> |
+    <a href="https://tiktok.com/" target="_blank">TikTok</a> |
+    <a href="https://youtube.com/" target="_blank">YouTube</a> |
+    <a href="https://github.com/" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
